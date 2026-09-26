@@ -205,9 +205,9 @@ const TOOLS = [
  {id:'random-number',name:'Random Number Generator',cat:'Generator',emoji:'🎲',desc:'Generate random numbers within a custom range.'},
  {id:'random-string',name:'Random String Generator',cat:'Generator',emoji:'🔡',desc:'Generate random alphanumeric strings.'},
 ];
-const AD_ENABLED = false; // flip to true and paste your ad network's code into adSlot() once approved — slots render invisible (nothing at all) until then
+const AD_ENABLED = false; // reserved boxes stay hidden unless a real banner/native ad code is added here later
 function adSlot(size,label){
-  if(!AD_ENABLED) return ''; // stays completely hidden so visitors never see an empty/broken ad box
+  if(!AD_ENABLED) return '';
   const dims = size==='banner'?'ad-banner':size==='square'?'ad-square':'ad-inline';
   return `<div class="ad-slot ${dims}" data-ad-slot="${label}"><!-- paste ad network code for slot "${label}" here --></div>`;
 }
@@ -1219,5 +1219,6 @@ router();
 <script>if(window.AD_ENABLED){var s=document.createElement('script');s.src='https://quge5.com/88/tag.min.js';s.async=true;s.dataset.zone='287335';s.dataset.cfasync='false';document.body.appendChild(s);}</script>
 <script>if(window.AD_ENABLED){(function(s){s.dataset.zone='11899959',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))}</script>
 <script>if(window.AD_ENABLED){(function(s){s.dataset.zone='11899963',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))}</script>
+<script>if(window.AD_ENABLED){(function(s){s.dataset.zone='11900098',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))}</script>
 </body>
 </html>
